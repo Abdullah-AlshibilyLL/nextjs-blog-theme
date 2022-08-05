@@ -1,6 +1,12 @@
 import '../styles/globals.css';
 import 'prismjs/themes/prism-tomorrow.css';
 
+import TagManager from 'react-gtm-module';
+
+const tagManagerArgs = {
+  gtmId: 'GTM-5CWTVQ2'
+}
+
 function MyApp({ Component, pageProps }) {
   return (
     <>
@@ -10,4 +16,9 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+
+export default class MyApp extends App {
+  componentDidMount() {
+    TagManager.initialize(tagManagerArgs);
+  }
+};
