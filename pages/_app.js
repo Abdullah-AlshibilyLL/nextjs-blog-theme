@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
 }
 
 
-export default class MyApp extends App {
+export default class MyApp{
   componentDidMount() {
     TagManager.initialize(tagManagerArgs);
   }
